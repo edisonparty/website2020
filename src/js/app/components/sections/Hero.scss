@@ -3,6 +3,10 @@
 .hero {
   margin-bottom: $section-margin-bottom;
 
+  @media screen and (max-width: $break-grid) {
+    margin-bottom: $section-margin-bottom-mobile;
+  }
+
   picture {
     height: 100%;
     width: 100%;

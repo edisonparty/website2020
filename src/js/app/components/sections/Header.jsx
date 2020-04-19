@@ -9,9 +9,17 @@ class Header extends PureComponent {
   constructor (props) {
     super(props);
     autoBind(this);
+    this.state = {
+      burgerOpen: false,
+    };
   }
 
   componentDidMount () {
+  }
+
+  openBurger (event) {
+    event.preventDefault();
+    this.setState({burgerOpen: !this.state.burgerOpen});
   }
 
   render () {
@@ -20,7 +28,14 @@ class Header extends PureComponent {
 
     return (
       <header>
+        <div className={classNames('mobile-nav', this.state.burgerOpen ? 'open' : '')}>
+          {this.props.site_navigation &&
+          this.props.site_navigation.map((item, i) => {
+            return <a key={i} href={item.link}>{item.label}</a>;
+          })}
+        </div>
         <nav>
+          <a href='#' className='burger' onClick={this.openBurger}>☰</a>
           {this.props.site_navigation &&
           this.props.site_navigation.map((item, i) => {
             return <a key={i} href={item.link}>{item.label}</a>;

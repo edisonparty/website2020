@@ -7,18 +7,59 @@ header {
   position: fixed;
   width: 100%;
 
+  .mobile-nav {
+    background-color: #000;
+    display: none;
+    margin-top: 40px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    position: fixed;
+    width: 100%;
+
+    &.open {
+      display: block;
+    }
+
+    a {
+      @include typo-small;
+      color: #fff;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
   nav {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
 
+    @media screen and (max-width: $break-grid) {
+      height: 24px;
+    }
+
     a {
       @include typo-small;
       color: #fff;
+      display: none;
       margin-bottom: 0;
       padding-left: $grid-size * 2;
       padding-right: $grid-size * 2;
       text-decoration: underline;
+
+      &.burger {
+        display: none;
+      }
+
+      @media screen and (max-width: $break-grid) {
+        &.burger {
+          display: block;
+          font-size: 32px;
+          left: 16px;
+          padding: 0;
+          position: absolute;
+          text-decoration: none;
+        }
+      }
 
       &:hover {
         text-decoration: none;
