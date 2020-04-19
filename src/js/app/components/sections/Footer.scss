@@ -1,0 +1,47 @@
+@import '../../../../scss/main';
+
+footer {
+  background-color: #000;
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+  .section {
+    background-color: inherit;
+  }
+
+  .text {
+    @include space-horizontal($col-gutter);
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 100px;
+
+    div {
+      @include col(4, 12);
+    }
+  }
+
+  .logos {
+    // @include space-horizontal($col-gutter);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      // @include col(4, 6);
+      flex-basis: 20%;
+      margin-bottom: 24px;
+      margin-left: 80px;
+      // margin-right: 24px;
+
+      picture {
+        width: 100%;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

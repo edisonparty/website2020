@@ -1,0 +1,84 @@
+@import '../../../../scss/main';
+
+.wysiwyg-module {
+  color: inherit;
+
+  img {
+    display: none;
+  }
+
+  h1 {
+    @include typo-h1;
+  }
+
+  h2 {
+    @include typo-h2;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include typo-h3;
+  }
+
+  ul {
+    @include typo-small;
+
+    li {
+      ul {
+        padding-left: $grid-size * 2;
+
+        li {
+
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    @include typo-small;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      line-height: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &.large {
+    p {
+      @include typo-large;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      @include typo-large;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

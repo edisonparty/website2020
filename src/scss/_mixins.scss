@@ -1,0 +1,87 @@
+@mixin aspect-ratio($width, $height) {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: ($height / $width) * 100%;
+    width: 100%;
+  }
+
+  > * {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin focus-effect {
+  box-shadow: 0 0 6px 1px  #78f;
+  outline: none;
+}
+
+@mixin focus-effect-text {
+  outline: none;
+  text-shadow: 0 0 2px  #78f;
+}
+
+@mixin flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin fallout {
+  z-index: 0;
+
+  &::before {
+    background-color: inherit;
+    content: '';
+    display: block;
+    height: 100%;
+    left: calc((100% - 100vw) / 2);
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+  }
+}
+
+@mixin outer-container {
+  max-width: $site-max-width;
+  padding: 0 $page-margin;
+  width: 100%;
+}
+
+@mixin margin-bypass {
+  left: calc((100vw - 100%) / -2);
+  position: relative;
+  width: 100vw;
+}
+
+@mixin space-vertical($spacing) {
+  > * {
+    &:not(:last-child) {
+      margin-bottom: $spacing;
+    }
+  }
+}
+
+@mixin space-horizontal($spacing) {
+  > * {
+    &:not(:last-child) {
+      margin-right: $spacing;
+    }
+  }
+}
+
+@mixin size($size) {
+  height: $size;
+  width: $size;
+}

@@ -1,0 +1,50 @@
+@mixin font-fallback-chain-primary {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+// Define all typographic settings like this.
+// The naming syntax is:
+// typo-
+//    [fontsize in pixels]-
+//    [letterspacing, where n means negative and p means point (as in decimal)]-
+//    [lineheight]
+
+@mixin typo-small {
+  @include font-fallback-chain-primary;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+@mixin typo-large {
+  @include font-fallback-chain-primary;
+  font-size: 24px;
+  letter-spacing: 0px;
+  line-height: 32px;
+  margin-bottom: 32px;
+}
+
+@mixin typo-h1 {
+  @include font-fallback-chain-primary;
+  font-size: 48px;
+  letter-spacing: 0px;
+  line-height: 52px;
+  margin-bottom: 52px;
+}
+
+@mixin typo-h2 {
+  @include font-fallback-chain-primary;
+  font-size: 36px;
+  letter-spacing: 0px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+@mixin typo-h3 {
+  @include font-fallback-chain-primary;
+  font-size: 28px;
+  letter-spacing: 0px;
+  line-height: 32px;
+  margin-bottom: 32px;
+}

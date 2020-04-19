@@ -1,0 +1,94 @@
+@import '../../../../scss/main';
+
+.participants {
+  @include space-horizontal($col-gutter);
+  display: flex;
+  flex-wrap: nowrap;
+
+  .participants-list {
+    @include col(8, 12);
+    @include space-horizontal($col-gutter);
+
+    .wysiwyg-module {
+      margin-bottom: 60px;
+      width: 100%;
+    }
+
+    .list {
+      .list-row {
+        display: flex;
+        flex-wrap: nowrap;
+
+        &:nth-child(even) {
+          background-color: rgba(0, 0, 0, .1);
+        }
+
+        span {
+          @include typo-small;
+          margin-bottom: 0;
+          padding-bottom: 4px;
+          padding-left: $grid-size;
+          padding-top: 4px;
+
+          &:first-child {
+            width: 5%;
+          }
+
+          &:nth-child(2) {
+            width: 60%;
+          }
+
+          &:nth-child(3) {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  .registration-info {
+    @include col(4, 12);
+
+    .registration-form {
+      @include typo-small;
+      margin-top: 60px;
+
+      span {
+        display: block;
+        margin-bottom: $grid-size;
+      }
+
+      input {
+        margin-bottom: $grid-size * 2;
+        padding: $grid-size;
+        width: 100%;
+      }
+
+      a {
+        border: 1px solid #000;
+        color: #000;
+        display: block;
+        margin-bottom: $grid-size * 2;
+        margin-top: $grid-size * 2;
+        padding: $grid-size * 1.25;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, .2);
+          border-color: #fff;
+        }
+      }
+    }
+
+    .error-message {
+      color: #f00;
+    }
+
+    .success-message {
+      color: #080;
+    }
+  }
+}
+

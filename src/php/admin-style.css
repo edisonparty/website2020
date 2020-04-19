@@ -1,0 +1,168 @@
+.acf-postbox:not(.seamless) {
+  border-radius: 4px;
+  box-shadow: none;
+  margin-left: -4px;
+  margin-right: -4px;
+  overflow: hidden;
+}
+
+.acf-postbox.closed .hndle {
+  border-bottom: 0;
+}
+
+#normal-sortables .acf-postbox > .inside {
+  background-color: #f1f1f1;
+}
+
+#normal-sortables .acf-postbox:not(.seamless) > .inside {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 2px;
+  margin: 8px !important;
+}
+
+.acf-flexible-content .layout {
+  border-radius: 4px;
+  margin: 8px 0 0;
+  overflow: hidden;
+}
+
+.acf-flexible-content .layout .layout .acf-fc-layout-handle {
+  background-color: #f9f9f9;
+}
+
+.acf-fields.-border {
+  background: transparent;
+  border: 0;
+}
+
+.acf-fields.-border > div {
+  padding: 0;
+}
+
+.acf-fields > .acf-field {
+  padding: 8px;
+}
+
+.acf-fields > .acf-field.min,
+.acf-fields > .acf-field.min-100,
+.acf-fields > .acf-field.stretch {
+  display: table-cell;
+  border-top: 0;
+}
+
+.acf-fields > .acf-field.min-100 {
+  min-width: 100px;
+}
+
+.acf-fields > .acf-field.stretch {
+  width: 100%;
+}
+
+.acf-image-uploader .image-wrap {
+  max-width: initial !important;
+  width: calc(100% + 16px);
+  margin: -8px 0 -8px -8px;
+}
+
+.acf-image-uploader .hide-if-value {
+  padding: 20px 20px 20px 4px;
+}
+
+.acf-accordion {
+  padding: 0;
+}
+
+.acf-image-uploader .image-wrap img {
+  height: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.layout[data-layout='grid'] .ui-sortable {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.layout[data-layout='grid'] .layout[data-layout^='grid_element-'] {
+  flex: 0 0 calc(25% - 10px);
+  margin: 4px !important;
+}
+
+
+.acf-switch {
+  height: 26px;
+}
+
+.acf-switch span {
+  line-height: 18px;
+}
+
+.acf-field.acf-accordion {
+  background: #f9f9f9;
+  padding: 0;
+}
+
+.acf-field.acf-accordion.acf-accordion-title {
+  background: #fff;
+}
+
+.acf-flexible-content .layout:hover {
+  border: 1px solid #999;
+}
+
+@media screen and (min-width: 1201px) {
+  .acf-field.title-size {
+    float: left;
+  }
+
+  .acf-field.title-size + .acf-field {
+    border-left: 1px solid #eee;
+    border-top: 0;
+    height: 100%;
+    left: 90px;
+    position: absolute;
+    width: calc(100% - 90px);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .acf-field[data-width] + .acf-field[data-width] {
+    border-left: 0;
+  }
+
+  .acf-field[data-width] {
+    clear: both;
+    float: none;
+    min-height: 0 !important;
+    width: auto !important;
+  }
+
+  .acf-fields > .acf-field[data-width] {
+    margin: 15px 0;
+    padding: 15px 12px;
+  }
+}
+
+/* hide buttons that doesnt work with antoinette */
+#preview-action {
+  display: none;
+}
+#wp-admin-bar-site-name {
+  display: none;
+}
+
+/* language settings box */
+#icl_div_config {
+  display: none;
+}
+
+/* hide wpml buttons in sidebar */
+#icl_cfo,
+.otgs-ico-help.js-otgs-popover-tooltip {
+  display: none;
+}

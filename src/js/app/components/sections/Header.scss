@@ -1,0 +1,28 @@
+@import '../../../../scss/main';
+
+header {
+  background-color: #000;
+  padding-bottom: $grid-size * 2;
+  padding-top: $grid-size * 2;
+  position: fixed;
+  width: 100%;
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    a {
+      @include typo-small;
+      color: #fff;
+      margin-bottom: 0;
+      padding-left: $grid-size * 2;
+      padding-right: $grid-size * 2;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

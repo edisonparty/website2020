@@ -1,0 +1,85 @@
+@import '../../../../scss/main';
+
+.video-player-top {
+  padding-bottom: 130px;
+
+  @media screen and (max-width: $break-sm) {
+    padding-bottom: 70px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  .content-text {
+    padding-left: 50%;
+
+    p {
+      padding-left: 1rem;
+      width: 80%;
+    }
+
+    @media screen and (max-width: $break-sm) {
+      padding-left: 0;
+
+      p {
+        padding-left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.video-player {
+  cursor: pointer;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+
+  video {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .play-button {
+    color: $color-white;
+    cursor: pointer;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: color $transition-fast ease-in;
+
+    &:hover {
+      color: $color-grey-2;
+    }
+
+    h2 {
+      @include font-fallback-chain-light-cond;
+      letter-spacing: 0;
+      overflow: hidden;
+
+      .kern-fix {
+        background-color: transparent !important;
+        display: initial !important;
+        left: -.6rem;
+        padding: 0 !important;
+        position: relative;
+
+        @media screen and (max-width: $break-lg) {
+          left: -.6vw;
+        }
+
+        @media screen and (max-width: $break-md) {
+          left: -.7vw;
+        }
+
+      }
+    }
+  }
+}

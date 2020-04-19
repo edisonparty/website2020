@@ -1,0 +1,25 @@
+@function grid($n) {
+  @return $n * $grid-size;
+}
+
+@function col-width($n, $container: $cols-max) {
+  $n: $n / $container * $cols-max;
+  @return calc((100% - #{($cols-max - 1) * $col-gutter}) / #{$cols-max} * #{$n} + #{$col-gutter} * #{$n - 1});
+}
+
+@function col-width-mobile($n, $container: $cols-mobile) {
+  $n: $n / $container * $cols-mobile;
+  @return calc((100% - #{($cols-mobile - 1) * $col-gutter-mobile}) / #{$cols-mobile} * #{$n} + #{$col-gutter-mobile} * #{$n - 1});
+}
+
+@mixin col($n, $m) {
+  width: col-width($n);
+
+  @media (max-width: $break-grid) {
+    width: col-width-mobile($m);
+  }
+}
+
+@mixin row {
+  display: flex;
+}

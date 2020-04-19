@@ -1,0 +1,33 @@
+@import '../../scss/main';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+}
+
+body {
+  background-color: #fff;
+}
+
+#react-root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+
+  > main {
+    padding-top: $grid-size * 12;
+    width: 100%;
+  }
+}
+
+.section {
+  @include outer-container;
+}

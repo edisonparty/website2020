@@ -1,0 +1,58 @@
+@import '../../../../scss/main';
+
+.section {
+  background-color: rgba(255, 255, 255, .2);
+  margin-bottom: 60px;
+
+  .column-container {
+    .column {
+      .module {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .col-1 {
+    @include space-horizontal($col-gutter);
+    display: flex;
+    flex-wrap: nowrap;
+
+    .column {
+      @include col(12, 12);
+    }
+  }
+
+  .col-2 {
+    @include space-horizontal($col-gutter);
+    display: flex;
+    flex-wrap: nowrap;
+
+    .column {
+      @include col(6, 12);
+    }
+  }
+
+  .col-3 {
+    @include space-horizontal($col-gutter);
+    display: flex;
+    flex-wrap: nowrap;
+
+    .column {
+      @include col(4, 12);
+    }
+  }
+
+  .col-4 {
+    @include space-horizontal($col-gutter);
+    display: flex;
+    flex-wrap: nowrap;
+
+    .column {
+      @include col(3, 12);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$grid-size: 8px;
+$cols-max: 12;
+$cols-mobile: 4;
+$col-gutter: 4 * $grid-size;
+$col-gutter-mobile: 2 * $grid-size;
+$page-margin: 16 * $grid-size;
+$page-margin-mobile: 2 * $grid-size;
+$site-max-width: 100%;
+$break-desktop: 1024px;
+$break-tablet: 940px;
+$break-grid: #{$break-tablet - 1px};
+
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #888;
+$color-red: #f00;
+$color-green: #0f0;
+$color-blue: #00f;
+$color-yellow: #ff0;
+$color-pink: #f0f;
+$color-cyan: #0ff;
+
+$transition-fast: 150ms;
+$transition-medium: 400ms;
+$transition-slow: 1000ms;
+
+:export {
+  // sass-lint:disable no-misspelled-properties
+  colsMax: $cols-max;
+  colsMobile: $cols-mobile;
+}
