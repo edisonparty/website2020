@@ -1,6 +1,7 @@
 @import '../../../../scss/main';
 
 .hero {
+  font-size: 0;
   margin-bottom: $section-margin-bottom;
 
   @media screen and (max-width: $break-grid) {
