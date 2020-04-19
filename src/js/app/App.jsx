@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import autoBind from 'react-autobind';
-// import classNames from 'classnames';
+import classNames from 'classnames';
 import {connect} from 'react-redux';
 import Footer from '~/js/app/components/sections/Footer';
 import FourColumnLayout from '~/js/app/components/sections/fourColumnLayout';
@@ -68,11 +68,19 @@ class App extends PureComponent {
 
   render () {
     const {page, options} = this.props;
+    let hasHero = false;
+
+    for (let i = 0; i < page.sections.length; i++) {
+      if (page.sections[i].acf_fc_layout === 'hero') {
+        hasHero = true;
+        break;
+      }
+    }
 
     return (
       <>
         <Header {...options} />
-        <main>
+        <main className={classNames(hasHero ? 'has-hero' : '')}>
           {this.renderFlexibleContent(page.sections, options) }
         </main>
         <Footer {...options} />

@@ -24,8 +24,12 @@ body {
   position: relative;
 
   > main {
-    padding-top: 56px; // @TODO magic number
+    padding-top: 116px;
     width: 100%;
+
+    &.has-hero {
+      padding-top: 56px; // @TODO magic number
+    }
   }
 }
 
