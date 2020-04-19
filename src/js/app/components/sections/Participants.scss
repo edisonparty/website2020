@@ -5,13 +5,26 @@
   display: flex;
   flex-wrap: nowrap;
 
+  @media screen and (max-width: $break-grid) {
+    flex-wrap: wrap;
+  }
+
   .participants-list {
-    @include col(8, 12);
+    @include col(8, 4);
     @include space-horizontal($col-gutter);
 
+    @media screen and (max-width: $break-grid) {
+      margin-bottom: $section-margin-bottom-mobile;
+      margin-right: 0 !important;
+    }
+
     .wysiwyg-module {
-      margin-bottom: 60px;
+      margin-bottom: $section-margin-bottom;
       width: 100%;
+
+      @media screen and (max-width: $break-grid) {
+        margin-bottom: $section-margin-bottom-mobile;
+      }
     }
 
     .list {
@@ -36,10 +49,18 @@
 
           &:nth-child(2) {
             width: 60%;
+
+            @media screen and (max-width: $break-grid) {
+              width: 95%;
+            }
           }
 
           &:nth-child(3) {
             width: 30%;
+
+            @media screen and (max-width: $break-grid) {
+              display: none;
+            }
           }
         }
       }
@@ -47,11 +68,11 @@
   }
 
   .registration-info {
-    @include col(4, 12);
+    @include col(4, 4);
 
     .registration-form {
       @include typo-small;
-      margin-top: 60px;
+      margin-top: $section-margin-bottom;
 
       span {
         display: block;

@@ -2,10 +2,23 @@
 
 .section {
   background-color: rgba(255, 255, 255, .2);
-  margin-bottom: 60px;
+  margin-bottom: $section-margin-bottom;
+
+  @media screen and (max-width: $break-grid) {
+    margin-bottom: $section-margin-bottom-mobile;
+  }
 
   .column-container {
     .column {
+      @media screen and (max-width: $break-grid) {
+        margin-bottom: 20px !important;
+        margin-right: 0 !important;
+
+        &:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+
       .module {
         margin-bottom: 10px;
 
@@ -20,9 +33,12 @@
     @include space-horizontal($col-gutter);
     display: flex;
     flex-wrap: nowrap;
+    @media screen and (max-width: $break-grid) {
+      flex-wrap: wrap;
+    }
 
     .column {
-      @include col(12, 12);
+      @include col(12, 4);
     }
   }
 
@@ -30,9 +46,12 @@
     @include space-horizontal($col-gutter);
     display: flex;
     flex-wrap: nowrap;
+    @media screen and (max-width: $break-grid) {
+      flex-wrap: wrap;
+    }
 
     .column {
-      @include col(6, 12);
+      @include col(6, 4);
     }
   }
 
@@ -40,9 +59,12 @@
     @include space-horizontal($col-gutter);
     display: flex;
     flex-wrap: nowrap;
+    @media screen and (max-width: $break-grid) {
+      flex-wrap: wrap;
+    }
 
     .column {
-      @include col(4, 12);
+      @include col(4, 4);
     }
   }
 
@@ -50,9 +72,12 @@
     @include space-horizontal($col-gutter);
     display: flex;
     flex-wrap: nowrap;
+    @media screen and (max-width: $break-grid) {
+      flex-wrap: wrap;
+    }
 
     .column {
-      @include col(3, 12);
+      @include col(3, 4);
     }
   }
 }

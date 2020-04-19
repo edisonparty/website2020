@@ -1,9 +1,9 @@
 @import '../../../../scss/main';
 
 .button-panel {
-  margin-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: $section-margin-bottom;
 
   a {
     margin-right: $grid-size * 2;

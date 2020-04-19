@@ -5,8 +5,18 @@
   display: flex;
   flex-wrap: nowrap;
 
+  @media screen and (max-width: $break-grid) {
+    flex-wrap: wrap;
+  }
+
   .day {
     flex: 1;
+
+    @media screen and (max-width: $break-grid) {
+      flex-basis: 100%;
+      margin-bottom: $section-margin-bottom-mobile;
+      margin-right: 0 !important;
+    }
 
     .title {
       @include typo-small;
@@ -24,6 +34,10 @@
 
       .time {
         width: 20%;
+
+        @media screen and (max-width: $break-grid) {
+          width: 15%;
+        }
       }
 
       .text {
