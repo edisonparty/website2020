@@ -1,0 +1,37 @@
+@import '../../../../scss/main';
+
+.button-panel {
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    margin-right: $grid-size * 2;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    button {
+      @include typo-small;
+      background-color: #aaa;
+      border: 1px solid #000;
+      border-radius: 4px;
+      color: #000;
+      cursor: pointer;
+      padding-bottom: 8px;
+      padding-left: $grid-size * 4;
+      padding-right: $grid-size * 4;
+      padding-top: 8px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}

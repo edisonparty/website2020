@@ -58,7 +58,7 @@ class LayoutRenderer extends PureComponent {
       <div className={classNames(className, 'column-container')}>
         {columns.map((column, i) => {
           return <div key={i} className='column'>
-            {column.modules.map((module, j) => {
+            {column.modules && column.modules.map((module, j) => {
               return (
                 <div key={j} className='module'>
                   <ModuleRenderer {...module} />

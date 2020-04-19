@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import autoBind from 'react-autobind';
+import ButtonPanel from '~/js/app/components/sections/ButtonPanel';
 import classNames from 'classnames';
 import Image from '~/js/app/components/common/Image';
 import ImageModule from '~/js/app/components/sections/ImageModule';
@@ -21,6 +22,7 @@ class ModuleRenderer extends PureComponent {
     const layoutComponents = {
       image: ImageModule,
       wysiwyg_editor: WysiwygModule,
+      button_panel: ButtonPanel,
     };
 
     console.log('module renderer');

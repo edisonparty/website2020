@@ -24,6 +24,7 @@
 
   ul {
     @include typo-small;
+    padding-left: 18px;
 
     li {
       ul {
