@@ -1,7 +1,7 @@
 <?php
 
 $staticDomain = 'http://localhost:9090';
-$staticBasePath = 'http://localhost:9090/wp-content/themes/akademi';
+$staticBasePath = $staticDomain . '/wp-content/themes/akademi';
 
 $dev_fake_ie = false;
 
