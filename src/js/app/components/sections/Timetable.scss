@@ -24,6 +24,7 @@
 
     .title {
       @include typo-small;
+      font-weight: 700;
     }
 
     .entry-row {

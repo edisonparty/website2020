@@ -12,7 +12,9 @@ html {
 }
 
 body {
-  background-color: #f00;
+  // background-color: #f00;
+  background-image: linear-gradient(to bottom, #31a2a0, #255655);
+  background-attachment: fixed;
 }
 
 #react-root {
