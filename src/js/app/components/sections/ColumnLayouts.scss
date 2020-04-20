@@ -14,7 +14,7 @@
   .column-container {
     .column {
       @media screen and (max-width: $break-grid) {
-        margin-bottom: 20px !important;
+        margin-bottom: $section-margin-bottom-mobile !important;
         margin-right: 0 !important;
 
         &:last-child {
@@ -22,7 +22,11 @@
         }
 
         .module {
-          margin-bottom: $section-margin-bottom-mobile;
+          margin-bottom: $section-margin-bottom-mobile !important;
+
+          &:last-child {
+            margin-bottom: 0 !important;
+          }
         }
       }
 
