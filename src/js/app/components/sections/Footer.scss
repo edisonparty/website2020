@@ -47,11 +47,10 @@ footer {
     justify-content: center;
 
     a {
-      // @include col(4, 6);
-      flex-basis: 20%;
       margin-bottom: 24px;
-      margin-left: 80px;
-      // margin-right: 24px;
+      margin-left: 40px;
+      margin-right: 40px;
+      max-width: 156px;
 
       @media screen and (max-width: $break-grid) {
         margin-left: 16px;
