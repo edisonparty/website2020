@@ -10,7 +10,7 @@ $break-desktop: 1024px;
 $break-tablet: 600px;
 $break-grid: #{$break-tablet - 1px};
 $section-margin-bottom: $col-gutter;
-$section-margin-bottom-mobile: 40px;
+$section-margin-bottom-mobile: $col-gutter-mobile;
 
 $color-white: #fff;
 $color-black: #000;
