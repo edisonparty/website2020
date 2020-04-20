@@ -20,7 +20,12 @@ class Hero extends PureComponent {
 
     return (
       <div className='hero'>
-        <Image {...this.props.image} />
+        <div className='background'>
+          <Image {...this.props.image} />
+        </div>
+        <div className='logo'>
+          <Image {...this.props.logo} />
+        </div>
       </div>
     );
   }
@@ -30,4 +35,5 @@ export default Hero;
 
 Hero.propTypes = {
   image: PropTypes.any,
+  logo: PropTypes.any,
 };

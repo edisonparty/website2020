@@ -4,17 +4,48 @@
   font-size: 0;
   height: 100vh;
   margin-bottom: $section-margin-bottom;
+  position: relative;
 
   @media screen and (max-width: $break-grid) {
     height: 60vh;
     margin-bottom: $section-margin-bottom-mobile;
   }
 
-  picture {
-    img {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
+  .background {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+
+    picture {
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+
+  .logo {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    picture {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50vw;
+      z-index: 1;
+
+      @media screen and (max-width: $break-grid) {
+        width: 75vw;
+      }
+
+      img {
+        color: #000;
+      }
     }
   }
 }
