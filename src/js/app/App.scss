@@ -41,7 +41,7 @@ body {
 
 button {
   @include typo-small;
-  background-color: #aaa;
+  background-color: transparent;
   border: 1px solid #000;
   border-radius: 4px;
   color: #000;
@@ -51,13 +51,14 @@ button {
   padding-left: $grid-size * 4;
   padding-right: $grid-size * 4;
   padding-top: 8px;
+  transition-duration: .2s;
 
   &:focus {
     outline: 0;
   }
 
   &:hover {
-    background-color: #fff;
+    background-color: #3dbcc8;
     color: #000;
   }
 }
