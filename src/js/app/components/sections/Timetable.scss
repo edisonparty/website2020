@@ -1,12 +1,16 @@
 @import '../../../../scss/main';
 
 .timetable {
-  @include space-horizontal($col-gutter);
-  display: flex;
-  flex-wrap: nowrap;
+  .inner {
+    @include space-horizontal($col-gutter);
+    background-color: rgba(255, 255, 255, .25);
+    display: flex;
+    flex-wrap: nowrap;
+    padding: $grid-size * 2;
 
-  @media screen and (max-width: $break-grid) {
-    flex-wrap: wrap;
+    @media screen and (max-width: $break-grid) {
+      flex-wrap: wrap;
+    }
   }
 
   .day {

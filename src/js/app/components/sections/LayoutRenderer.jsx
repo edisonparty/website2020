@@ -60,7 +60,7 @@ class LayoutRenderer extends PureComponent {
           return <div key={i} className='column'>
             {column.modules && column.modules.map((module, j) => {
               return (
-                <div key={j} className='module'>
+                <div key={j} className={classNames('module', module.acf_fc_layout, this.props.module_spacing)}>
                   <ModuleRenderer {...module} />
                 </div>
               );
@@ -76,6 +76,7 @@ export default LayoutRenderer;
 
 LayoutRenderer.propTypes = {
   acf_fc_layout: PropTypes.string,
+  module_spacing: PropTypes.string,
   column_1: PropTypes.any,
   column_2: PropTypes.any,
   column_3: PropTypes.any,

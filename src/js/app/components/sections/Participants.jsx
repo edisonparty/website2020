@@ -147,7 +147,9 @@ class Participants extends PureComponent {
               <input onFocus={this.clearErrors} ref={this.emailRef} placeholder='Email' type='text' />
               <span>Country</span>
               <input onFocus={this.clearErrors} ref={this.countryRef} placeholder='Country' type='text' />
-              <a href='#' onClick={this.signup}>Register!</a>
+              <a href='#' onClick={this.signup}>
+                <button>Register!</button>
+              </a>
               {this.state.error &&
                 <div className='error-message'>
                   {this.props.invalid_forms_message}

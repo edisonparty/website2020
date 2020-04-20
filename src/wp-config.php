@@ -26,6 +26,9 @@ define('WP_SITEURL', $siteroot);
 define('WP_HOME', $siteroot);
 define('WP_POST_REVISIONS', 3);
 
+$staticDomain = 'http://localhost:9090';
+$staticBasePath = $staticDomain . '/wp-content/themes/akademi';
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *

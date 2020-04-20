@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: #f00;
 }
 
 #react-root {
@@ -35,4 +35,27 @@ body {
 
 .section {
   @include outer-container;
+}
+
+button {
+  @include typo-small;
+  background-color: #aaa;
+  border: 1px solid #000;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  padding-left: $grid-size * 4;
+  padding-right: $grid-size * 4;
+  padding-top: 8px;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
 }

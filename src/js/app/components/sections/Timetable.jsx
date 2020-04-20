@@ -23,9 +23,11 @@ class Timetable extends PureComponent {
 
     return (
       <div className='timetable section'>
-        {timetable.map((day, key) => {
-          return <TimetableDay key={key} data={day} />;
-        })}
+        <div className='inner'>
+          {timetable.map((day, key) => {
+            return <TimetableDay key={key} data={day} />;
+          })}
+        </div>
       </div>
     );
   }

@@ -20,7 +20,7 @@ class OneColumnLayout extends PureComponent {
     console.log(this.props);
 
     return (
-      <div className='section'>
+      <div className={classNames('section', this.props.section_spacing)}>
         <LayoutRenderer {...this.props} />
       </div>
     );
@@ -30,4 +30,5 @@ class OneColumnLayout extends PureComponent {
 export default OneColumnLayout;
 
 OneColumnLayout.propTypes = {
+  section_spacing: PropTypes.string,
 };

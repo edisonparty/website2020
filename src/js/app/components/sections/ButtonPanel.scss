@@ -5,33 +5,20 @@
   flex-wrap: wrap;
   margin-bottom: $section-margin-bottom;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   a {
     margin-right: $grid-size * 2;
 
-    &:last-child {
-      margin-right: 0;
+    @media screen and (max-width: $break-grid) {
+      margin-bottom: $grid-size;
     }
 
-    button {
-      @include typo-small;
-      background-color: #aaa;
-      border: 1px solid #000;
-      border-radius: 4px;
-      color: #000;
-      cursor: pointer;
-      padding-bottom: 8px;
-      padding-left: $grid-size * 4;
-      padding-right: $grid-size * 4;
-      padding-top: 8px;
-
-      &:focus {
-        outline: 0;
-      }
-
-      &:hover {
-        background-color: #fff;
-        color: #000;
-      }
+    &:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
     }
   }
 }

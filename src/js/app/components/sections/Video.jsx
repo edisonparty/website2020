@@ -1,79 +1,41 @@
 import React, {PureComponent} from 'react';
 import autoBind from 'react-autobind';
-import {cdnize} from '~/js/utils/cdnize';
+import classNames from 'classnames';
 import Image from '~/js/app/components/common/Image';
+import LayoutRenderer from '~/js/app/components/sections/LayoutRenderer';
 import PropTypes from 'prop-types';
-import {sectionWrapper} from '~/js/app/components/common/Section';
 import './Video.scss';
 
 class Video extends PureComponent {
   constructor (props) {
     super(props);
-    this.state = {
-      playing: false,
-    };
     autoBind(this);
-    this.ref = React.createRef();
   }
 
-  togglePlay () {
-    const videoElement = this.ref.current.querySelector('video');
-
-    if (this.state.playing) {
-      this.setState({playing: false});
-      videoElement.pause();
-    } else {
-      this.setState({playing: true});
-      videoElement.play();
-    }
+  componentDidMount () {
   }
 
   render () {
-    const svgPlay = '/wp-content/themes/akademi/img/play-icon.svg';
-    const {videoUrl, poster, needsWrapper, classNames,
-      header, content} = this.props;
-    const videoPosterUrl = cdnize(poster || '');
+    console.log('video module');
+    console.log(this.props);
 
-    const player =
-      <div className={'video-player ' + classNames} ref={this.ref}
-        onClick={this.togglePlay}>
-        <video poster={videoPosterUrl}>
-          <source src={videoUrl} type='video/mp4' />
-        </video>
-        {!this.state.playing && <div className='play-button'>
-          <Image url={svgPlay} />
-        </div>
-        }
-      </div>;
-
-    return needsWrapper
-      ? <div className='content'>
-        <div className={'video-player-top ' + (header === '' ? 'hidden' : '') }>
-          <h2 className='content-header'>{header}</h2>
-          <div className='content-text'
-            dangerouslySetInnerHTML={{__html: content}} />
-        </div>
-        {player}
+    return (
+      <div className='video-module'>
+        <figure>
+          <div className='video-aspect-container'>
+            <iframe src={'https://www.youtube.com/embed/' + this.props.youtube_video_id} frameBorder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullscreen={true} />
+          </div>
+          <figcaption>{this.props.video_byline}</figcaption>
+        </figure>
       </div>
-      : player;
+    );
   }
 }
 
-export default sectionWrapper(Video);
-export const GalleryVideo = Video;
+export default Video;
 
 Video.propTypes = {
-  classNames: PropTypes.string,
-  content: PropTypes.string,
-  header: PropTypes.string,
-  needsWrapper: PropTypes.bool,
-  poster: PropTypes.any,
-  videoUrl: PropTypes.string,
-};
-
-Video.defaultProps = {
-  classNames: '',
-  needsWrapper: true,
-  header: '',
-  content: '',
+  video_byline: PropTypes.string,
+  video_type: PropTypes.string,
+  youtube_video_id: PropTypes.string,
 };

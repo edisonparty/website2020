@@ -1,8 +1,5 @@
 <?php
 
-$staticDomain = 'http://localhost:9090';
-$staticBasePath = $staticDomain . '/wp-content/themes/akademi';
-
 $dev_fake_ie = false;
 
 function is_ie11_or_older() {

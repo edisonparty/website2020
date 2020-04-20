@@ -1,8 +1,11 @@
 @import '../../../../scss/main';
 
 .section {
-  background-color: rgba(255, 255, 255, .2);
   margin-bottom: $section-margin-bottom;
+
+  &.no-margin {
+    margin-bottom: 0;
+  }
 
   @media screen and (max-width: $break-grid) {
     margin-bottom: $section-margin-bottom-mobile;
@@ -17,10 +20,32 @@
         &:last-child {
           margin-bottom: 0 !important;
         }
+
+        .module {
+          margin-bottom: $section-margin-bottom-mobile;
+        }
       }
 
+      display: flex;
+      flex-direction: column;
+
       .module {
-        margin-bottom: 10px;
+        background-color: rgba(255, 255, 255, .25);
+        height: 100%;
+        margin-bottom: $section-margin-bottom;
+        padding: $grid-size * 2;
+
+        &.no-margin {
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+
+        &.video,
+        &.image {
+          background-color: rgba(255, 255, 255, .25);
+          padding: 0;
+        }
 
         &:last-child {
           margin-bottom: 0;
