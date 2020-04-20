@@ -57,6 +57,10 @@
   max-width: $site-max-width;
   padding: 0 $page-margin;
   width: 100%;
+
+  @media screen and (max-width: $break-grid) {
+    padding: 0 $page-margin-mobile;
+  }
 }
 
 @mixin margin-bypass {

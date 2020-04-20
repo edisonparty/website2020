@@ -12,39 +12,59 @@
 @mixin typo-small {
   @include font-fallback-chain-primary;
   font-size: 16px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   line-height: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @mixin typo-large {
   @include font-fallback-chain-primary;
-  font-size: 24px;
-  letter-spacing: 0px;
-  line-height: 32px;
-  margin-bottom: 32px;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 26px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @mixin typo-h1 {
   @include font-fallback-chain-primary;
-  font-size: 48px;
-  letter-spacing: 0px;
-  line-height: 52px;
-  margin-bottom: 52px;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @mixin typo-h2 {
   @include font-fallback-chain-primary;
-  font-size: 36px;
-  letter-spacing: 0px;
-  line-height: 40px;
-  margin-bottom: 40px;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @mixin typo-h3 {
   @include font-fallback-chain-primary;
-  font-size: 28px;
-  letter-spacing: 0px;
-  line-height: 32px;
-  margin-bottom: 32px;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
