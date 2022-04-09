@@ -63,7 +63,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "intersection-observer": "^0.5.1",
-    "moment": "^2.23.0",
+    "moment": "^2.29.2",
     "react": "^16.8.6",
     "react-autobind": "^1.0.6",
     "react-dom": "^16.8.6",
